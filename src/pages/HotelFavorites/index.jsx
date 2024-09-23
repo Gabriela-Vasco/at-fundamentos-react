@@ -9,13 +9,14 @@ export default function HotelFavorites() {
 
   useEffect(() => {
     let savedFavoriteHotels = JSON.parse(localStorage.getItem('favoriteHotels'));
-    if(!Array.isArray(savedFavoriteHotels)) {
-      savedFavoriteHotels = [savedFavoriteHotels];
-    }
-    
-    if (!savedFavoriteHotels.includes(null, undefined)) {
-      setFavoriteHotels(savedFavoriteHotels);
-    }
+  
+    if (!Array.isArray(savedFavoriteHotels)) {
+      savedFavoriteHotels = [];
+    } 
+  
+    savedFavoriteHotels = savedFavoriteHotels.filter(hotel => hotel !== null && hotel !== undefined);
+  
+    setFavoriteHotels(savedFavoriteHotels);
   }, []);
   
   return (
