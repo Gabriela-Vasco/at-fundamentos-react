@@ -1,0 +1,154 @@
+.home {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    min-height: 100vh;
+}
+
+.empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+}
+
+.empty > h1 {
+    color: #023047;
+    margin-top: 50px;
+}
+
+.empty > h3 {
+    color: #777373;
+    margin-top: 20px;
+}
+
+.empty > img {
+    width: 700px;
+    margin-top: 50px;
+}
+
+.sortSelect {
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-left: 30px;
+    height: 50px;
+    align-self: end
+}
+
+.searchAndOrderContainer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 15px;
+}
+
+.searchContainer > h2 {
+    color: #023047;
+    margin-bottom: 10px
+}
+
+.searchInput {
+    width: 500px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+  
+.hotelsContainer {
+    padding: 50px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.addButton {
+    color: white;
+    border: 1px solid white;
+    background: #023047;
+    padding: 10px 15px;
+    border-radius: 50%;
+    font-weight: bold;
+    align-self: flex-end;
+    margin: auto 20px 20px;
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: 24px
+}
+
+.modalTop {
+    display: flex;
+    justify-content: flex-end
+}
+
+.closeButton {
+    color: white;
+    border: 1px solid white;
+    background: #023047;
+    padding: 12px;
+    border-radius: 50%;
+    font-weight: bold;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.modalOverlay {
+    background-color: rgba(0, 0, 0, 0.75);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modalContent {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 600px;
+    width: 100%;
+    position: relative;
+}
+  
+@media (max-width: 768px) {
+    .hotelsContainer {
+        grid-template-columns: 1fr;
+    }
+
+    .searchAndOrderContainer {
+        flex-direction: column;
+        align-items: flex-start
+    }
+
+    .sortSelect {
+        margin-left: 0;
+        margin-top: 15px;
+        align-self: start;
+        height: 40px;
+    }
+
+    .searchInput {
+        width: 300px
+    }
+}
+
+@media (max-width: 480px) {
+    .hotelsContainer {
+      padding: 20px;
+    }
+
+    .empty > h1 {
+        font-size: 24px
+    }
+
+    .empty > img {
+        width: 100%;
+        margin-top: 50px;
+    }
+}

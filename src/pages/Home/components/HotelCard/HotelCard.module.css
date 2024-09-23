@@ -1,0 +1,60 @@
+.hotelCard {
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  border: 1px solid #f2f2f2;
+  padding: 10px;
+  width: 100%;
+  border-left: 8px solid #fb8500;
+  cursor: pointer;
+}
+
+.hotelCard:hover {
+  background-color: rgba(0, 0, 0, 0.1)
+}
+
+.icon {
+  background-color: transparent;
+  border: none;
+  align-self: start;
+  margin: 0 0 0 auto;
+  justify-self: end;
+  color: #023047;
+  cursor: pointer
+}
+  
+.hotelImage {
+  width: 150px;
+  height: 150px;
+  border-radius: 8px;
+}
+
+.hotelInfo {
+  margin-left: 20px;
+}
+
+.hotelInfo h3 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.hotelInfo p {
+  margin: 5px 0;
+}
+  
+@media (max-width: 480px) {
+  .hotelCard {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+  }
+
+  .hotelImage {
+    width: 100%;
+    height: auto
+  }
+
+  .hotelInfo {
+    margin-left: unset
+  }
+}

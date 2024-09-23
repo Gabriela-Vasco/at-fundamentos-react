@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  max-width: 100vw;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+ul {
+  list-style: none;
+}
+
+body.light {
+  background-color: #ffffff;
+  
+  header {
+    background-color: #023047;
+    color: #ffffff;
+  }
+
+
+}
+
+body.dark {
+  background-color: #121212;
+  color: #ffffff;
+
+  header {
+    background-color: #bde0fe;
+    color: #000000;
+  }
+
+  button {
+    color: #bde0fe;
+  }
+
+  ._servicesList_1r89x_40 {
+    color: #000000;
+  }
+}
+
+
