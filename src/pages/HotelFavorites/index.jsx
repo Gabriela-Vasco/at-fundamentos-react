@@ -12,8 +12,8 @@ export default function HotelFavorites() {
     if(!Array.isArray(savedFavoriteHotels)) {
       savedFavoriteHotels = [savedFavoriteHotels];
     }
-
-    if (savedFavoriteHotels) {
+    
+    if (!savedFavoriteHotels.includes(null, undefined)) {
       setFavoriteHotels(savedFavoriteHotels);
     }
   }, []);

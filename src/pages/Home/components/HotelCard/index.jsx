@@ -36,7 +36,7 @@ export default function HotelCard({ hotel = {} }) {
     let updatedFavorites;
 
     if (isCurrentHotelAFavorite) {
-      updatedFavorites = favoriteHotels?.filter(favHotel => favHotel.name !== hotel.name);
+      updatedFavorites = favoriteHotels?.filter(favHotel => favHotel?.name !== hotel?.name);
       setIsCurrentHotelAFavorite(false);
     } else {
       updatedFavorites = [...favoriteHotels, hotel];
@@ -50,12 +50,12 @@ export default function HotelCard({ hotel = {} }) {
 
   return (
     <div className={styles.hotelCard}>
-      <img src={hotel.image} alt={hotel.name} className={styles.hotelImage} onClick={handleCardClick}/>
+      <img src={hotel?.image} alt={hotel?.name} className={styles.hotelImage} onClick={handleCardClick}/>
       <div className={styles.hotelInfo} onClick={handleCardClick}>
-        <h3>{hotel.name}</h3>
-        <p>{hotel.city}, {hotel.state}</p>
-        <p>Preço: R$ {hotel.price}/noite</p>
-        <p>Classificação: {hotel.stars} estrelas</p>
+        <h3>{hotel?.name}</h3>
+        <p>{hotel?.city}, {hotel?.state}</p>
+        <p>Preço: R$ {hotel?.price}/noite</p>
+        <p>Classificação: {hotel?.stars} estrelas</p>
       </div>
       <button onClick={toggleFavoriteHotel} className={styles.icon}>
         {
