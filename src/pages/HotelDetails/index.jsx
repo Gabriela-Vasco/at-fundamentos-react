@@ -21,7 +21,7 @@ export default function HotelDetails() {
   useEffect(() => {
     const savedHotels = JSON.parse(localStorage.getItem('hotels'));
     if (savedHotels) {
-      const selectedHotel = savedHotels.find((hotel) => hotel.id === parseInt(id));
+      const selectedHotel = savedHotels?.find((hotel) => hotel.id === parseInt(id));
       setHotel(selectedHotel);
     }
   }, [id]);

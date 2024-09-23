@@ -19,7 +19,7 @@ export default function HotelCard({ hotel = {} }) {
     if(favoriteHotelsFromLocalStorage.length) {
       if(favoriteHotelsFromLocalStorage.length !== favoriteHotels.length) {
         setFavoriteHotels(favoriteHotelsFromLocalStorage);
-        const currentHotel = favoriteHotelsFromLocalStorage?.find(favHotel => favHotel.name === hotel.name);
+        const currentHotel = favoriteHotelsFromLocalStorage?.find(favHotel => favHotel?.name === hotel?.name);
       
         if (currentHotel) {
           setIsCurrentHotelAFavorite(true);
